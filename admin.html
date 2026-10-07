@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lauren Notes — Admin</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main>
+    <section id="loginPanel" class="panel narrow">
+      <h1>Lauren Notes — Admin</h1>
+      <form id="loginForm">
+        <label for="email">Admin email</label>
+        <input id="email" type="email" autocomplete="username" required>
+        <label for="adminPassword">Password</label>
+        <input id="adminPassword" type="password" autocomplete="current-password" required>
+        <button type="submit">Sign In</button>
+        <p id="loginMessage" class="message"></p>
+      </form>
+    </section>
+
+    <section id="adminPanel" class="panel" hidden>
+      <header class="admin-header">
+        <div>
+          <h1>50 Positive Notes for Your 50th Birthday</h1>
+          <p><strong id="noteCount">0</strong> notes received</p>
+        </div>
+        <div class="actions no-print">
+          <button id="refreshButton" type="button">Refresh</button>
+          <button id="csvButton" type="button">Download CSV</button>
+          <button id="printButton" type="button">Print Notes</button>
+          <button id="signOutButton" type="button" class="secondary">Sign Out</button>
+        </div>
+      </header>
+      <p id="adminMessage" class="message no-print"></p>
+      <div id="notes" class="notes"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

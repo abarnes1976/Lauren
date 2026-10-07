@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>50 Notes for Lauren</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="fifty">50</div>
+      <h1>50 Notes for Lauren</h1>
+      <p class="intro">Help us celebrate Lauren's 50th birthday with a short positive note.</p>
+      <p class="prompt">Share a memory, something you appreciate about her, something that makes you smile, or simply something you'd like her to know.</p>
+
+      <form id="noteForm">
+        <label for="password">Birthday page password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" maxlength="80" autocomplete="name" required>
+
+        <div class="label-row">
+          <label for="note">Your note</label>
+          <span id="counter">0 / 250</span>
+        </div>
+        <textarea id="note" name="note" maxlength="250" rows="6" required
+          placeholder="Write your note for Lauren here..."></textarea>
+
+        <button id="submitButton" type="submit">Submit Note</button>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+* { box-sizing: border-box; }
+:root {
+  --ink: #302a32;
+  --muted: #706772;
+  --paper: #fffdf9;
+  --accent: #8a5368;
+  --accent-dark: #684052;
+  --line: #e7dfe2;
+}
+html, body { min-height: 100%; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% 15%, #f6e8ed 0, transparent 28%),
+    radial-gradient(circle at 85% 80%, #eee5d7 0, transparent 30%),
+    #f8f4f1;
+  font-family: Georgia, "Times New Roman", serif;
+}
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 18px;
+}
+.card {
+  width: min(680px, 100%);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 42px;
+  box-shadow: 0 18px 50px rgba(70, 50, 60, .10);
+}
+.fifty {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 14px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  font: 700 27px/1 Arial, sans-serif;
+}
+h1 {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: clamp(32px, 7vw, 48px);
+  font-weight: 500;
+}
+.intro, .prompt {
+  text-align: center;
+  line-height: 1.55;
+}
+.intro { font-size: 19px; margin: 0 auto 10px; }
+.prompt { color: var(--muted); max-width: 560px; margin: 0 auto 30px; }
+label {
+  display: block;
+  margin: 18px 0 7px;
+  font: 700 14px/1.3 Arial, sans-serif;
+}
+input, textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #cfc5c9;
+  border-radius: 9px;
+  background: #fff;
+  color: var(--ink);
+  font: 16px/1.45 Arial, sans-serif;
+}
+textarea { resize: vertical; min-height: 140px; }
+input:focus, textarea:focus {
+  outline: 2px solid rgba(138,83,104,.18);
+  border-color: var(--accent);
+}
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+#counter {
+  color: var(--muted);
+  font: 12px/1 Arial, sans-serif;
+}
+button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 9px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  font: 700 16px/1 Arial, sans-serif;
+}
+button:hover { background: var(--accent-dark); }
+button:disabled { opacity: .55; cursor: wait; }
+.message {
+  min-height: 22px;
+  margin: 15px 0 0;
+  text-align: center;
+  font: 14px/1.5 Arial, sans-serif;
+}
+.message.error { color: #9b2727; }
+.message.success { color: #2c6a42; font-weight: 700; }
+@media (max-width: 560px) {
+  .card { padding: 30px 20px; }
+}
